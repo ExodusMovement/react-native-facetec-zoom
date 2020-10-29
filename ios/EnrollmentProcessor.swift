@@ -122,12 +122,13 @@ class EnrollmentProcessor: NSObject, FaceTecFaceScanProcessorDelegate, URLSessio
                 FaceTecCustomization.setOverrideResultScreenSuccessMessage("Enrollment\nSucceeded")
                 faceScanResultCallback.onFaceScanResultSucceed()
             }
-            else if (didSucceed == false) {
-                // CASE:  In our Sample code, "success" being present and false means that the User Needs to Retry.
-                // Real Users will likely succeed on subsequent attempts after following on-screen guidance.
-                // Attackers/Fraudsters will continue to get rejected.
-                faceScanResultCallback.onFaceScanResultRetry()
-            }
+            // don't auto-retry
+//            else if (didSucceed == false) {
+//                // CASE:  In our Sample code, "success" being present and false means that the User Needs to Retry.
+//                // Real Users will likely succeed on subsequent attempts after following on-screen guidance.
+//                // Attackers/Fraudsters will continue to get rejected.
+//                faceScanResultCallback.onFaceScanResultRetry()
+//            }
             else {
                 // CASE:  UNEXPECTED response from API.  Our Sample Code keys of a success boolean on the root of the JSON object --> You define your own API contracts with yourself and may choose to do something different here based on the error.
                 faceScanResultCallback.onFaceScanResultCancel()
