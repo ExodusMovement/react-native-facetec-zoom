@@ -8,6 +8,15 @@
     "lint": "eslint --quiet --ignore-path .gitignore .",
     "precommit": "npm run lint"
   },
+  "files": [
+    "*",
+    ".*",
+    "!.eslintrc.js",
+    "!.gitignore",
+    "!.DS_Store",
+    "!fixtures",
+    "!README"
+  ],
   "keywords": [
     "react-native",
     "react-native-component",
