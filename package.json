@@ -1,5 +1,5 @@
 {
-  "name": "react-native-facetec-zoom",
+  "name": "@exodus/react-native-facetec-zoom",
   "version": "1.2.0",
   "description": "unofficial react-native bridge for Facetec's Zoom SDK",
   "main": "index.js",
